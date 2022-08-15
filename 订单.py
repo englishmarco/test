@@ -2,7 +2,7 @@ from click import Command
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 import time
-from selenium.webdriver.support.select import Select1
+from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.alert import Alert
