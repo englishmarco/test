@@ -1,0 +1,582 @@
+2022-11-10 17:13:55.648 | ERROR    | __main__:<module>:56 - An error has been caught in function '<module>', process 'MainProcess' (28780), thread 'MainThread' (12332):
+Traceback (most recent call last):
+
+> File "D:\pythonProject2\common\requests_api.py", line 56, in <module>
+    auto_request(url='/api/user/stu_info', method='GET', params=params)
+    │                                                           └ {'stu_name': '小草'}
+    └ <function auto_request at 0x000001A49A76FB80>
+
+TypeError: auto_request() got an unexpected keyword argument 'params'
+2022-11-10 17:13:55.651 | ERROR    | __main__:<module>:57 - An error has been caught in function '<module>', process 'MainProcess' (28780), thread 'MainThread' (12332):
+Traceback (most recent call last):
+
+> File "D:\pythonProject2\common\requests_api.py", line 57, in <module>
+    auto_request(url='/index.php?s=/5&page_id=17')
+    └ <function auto_request at 0x000001A49A76FB80>
+
+TypeError: auto_request() missing 1 required positional argument: 'method'
+2022-11-10 17:13:55.651 | ERROR    | __main__:<module>:59 - An error has been caught in function '<module>', process 'MainProcess' (28780), thread 'MainThread' (12332):
+Traceback (most recent call last):
+
+> File "D:\pythonProject2\common\requests_api.py", line 59, in <module>
+    auto_request(url='/api/user/login', method='POST', data=data)
+    │                                                       └ {'username': 'niuhanyang', 'passwd': 'aA123456'}
+    └ <function auto_request at 0x000001A49A76FB80>
+
+TypeError: auto_request() got an unexpected keyword argument 'data'
+2022-11-10 17:38:00.945 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1049, "Unknown database 'testbase'")
+2022-11-10 17:38:00.947 | ERROR    | __main__:<module>:74 - An error has been caught in function '<module>', process 'MainProcess' (25648), thread 'MainThread' (30652):
+Traceback (most recent call last):
+
+> File "D:\pythonProject2\common\base_api.py", line 74, in <module>
+    SQL().select_one(table_name='testcase_cjxm', field_name='case_id', value_name='1')
+    └ <class '__main__.SQL'>
+
+  File "D:\pythonProject2\common\base_api.py", line 40, in select_one
+    cursors = self.creat_connect()
+              │    └ <function SQL.creat_connect at 0x000002136CEDB790>
+              └ <__main__.SQL object at 0x000002136CED8A60>
+
+  File "D:\pythonProject2\common\base_api.py", line 31, in creat_connect
+    self.cursor = self.connection.cursor()
+    │    │        └ <__main__.SQL object at 0x000002136CED8A60>
+    │    └ None
+    └ <__main__.SQL object at 0x000002136CED8A60>
+
+AttributeError: 'SQL' object has no attribute 'connection'
+2022-11-10 17:38:00.968 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1049, "Unknown database 'testbase'")
+2022-11-10 17:38:00.968 | ERROR    | __main__:<module>:75 - An error has been caught in function '<module>', process 'MainProcess' (25648), thread 'MainThread' (30652):
+Traceback (most recent call last):
+
+> File "D:\pythonProject2\common\base_api.py", line 75, in <module>
+    SQL().select_one()
+    └ <class '__main__.SQL'>
+
+  File "D:\pythonProject2\common\base_api.py", line 40, in select_one
+    cursors = self.creat_connect()
+              │    └ <function SQL.creat_connect at 0x000002136CEDB790>
+              └ <__main__.SQL object at 0x000002136CED8A60>
+
+  File "D:\pythonProject2\common\base_api.py", line 31, in creat_connect
+    self.cursor = self.connection.cursor()
+    │    │        └ <__main__.SQL object at 0x000002136CED8A60>
+    │    └ None
+    └ <__main__.SQL object at 0x000002136CED8A60>
+
+AttributeError: 'SQL' object has no attribute 'connection'
+2022-11-10 17:38:00.994 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1049, "Unknown database 'testbase'")
+2022-11-10 17:38:00.995 | ERROR    | __main__:<module>:76 - An error has been caught in function '<module>', process 'MainProcess' (25648), thread 'MainThread' (30652):
+Traceback (most recent call last):
+
+> File "D:\pythonProject2\common\base_api.py", line 76, in <module>
+    SQL().select_all(table_name="testcase_cjxm")
+    └ <class '__main__.SQL'>
+
+  File "D:\pythonProject2\common\base_api.py", line 57, in select_all
+    cursors = self.creat_connect()
+              │    └ <function SQL.creat_connect at 0x000002136CEDB790>
+              └ <__main__.SQL object at 0x000002136CF06130>
+
+  File "D:\pythonProject2\common\base_api.py", line 31, in creat_connect
+    self.cursor = self.connection.cursor()
+    │    │        └ <__main__.SQL object at 0x000002136CF06130>
+    │    └ None
+    └ <__main__.SQL object at 0x000002136CF06130>
+
+AttributeError: 'SQL' object has no attribute 'connection'
+2022-11-10 17:43:52.320 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:name 'localhost' is not defined
+2022-11-10 17:43:52.320 | ERROR    | __main__:<module>:74 - An error has been caught in function '<module>', process 'MainProcess' (27452), thread 'MainThread' (23992):
+Traceback (most recent call last):
+
+> File "D:\pythonProject2\common\base_api.py", line 74, in <module>
+    SQL().select_one(table_name='testcase_cjxm', field_name='case_id', value_name='1')
+    └ <class '__main__.SQL'>
+
+  File "D:\pythonProject2\common\base_api.py", line 40, in select_one
+    cursors = self.creat_connect()
+              │    └ <function SQL.creat_connect at 0x000001CD83F4C700>
+              └ <__main__.SQL object at 0x000001CD83F48A60>
+
+  File "D:\pythonProject2\common\base_api.py", line 31, in creat_connect
+    self.cursor = self.connection.cursor()
+    │    │        └ <__main__.SQL object at 0x000001CD83F48A60>
+    │    └ None
+    └ <__main__.SQL object at 0x000001CD83F48A60>
+
+AttributeError: 'SQL' object has no attribute 'connection'
+2022-11-10 17:43:52.325 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:name 'localhost' is not defined
+2022-11-10 17:43:52.325 | ERROR    | __main__:<module>:75 - An error has been caught in function '<module>', process 'MainProcess' (27452), thread 'MainThread' (23992):
+Traceback (most recent call last):
+
+> File "D:\pythonProject2\common\base_api.py", line 75, in <module>
+    SQL().select_one()
+    └ <class '__main__.SQL'>
+
+  File "D:\pythonProject2\common\base_api.py", line 40, in select_one
+    cursors = self.creat_connect()
+              │    └ <function SQL.creat_connect at 0x000001CD83F4C700>
+              └ <__main__.SQL object at 0x000001CD83F48A60>
+
+  File "D:\pythonProject2\common\base_api.py", line 31, in creat_connect
+    self.cursor = self.connection.cursor()
+    │    │        └ <__main__.SQL object at 0x000001CD83F48A60>
+    │    └ None
+    └ <__main__.SQL object at 0x000001CD83F48A60>
+
+AttributeError: 'SQL' object has no attribute 'connection'
+2022-11-10 17:43:52.328 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:name 'localhost' is not defined
+2022-11-10 17:43:52.328 | ERROR    | __main__:<module>:76 - An error has been caught in function '<module>', process 'MainProcess' (27452), thread 'MainThread' (23992):
+Traceback (most recent call last):
+
+> File "D:\pythonProject2\common\base_api.py", line 76, in <module>
+    SQL().select_all(table_name="testcase_cjxm")
+    └ <class '__main__.SQL'>
+
+  File "D:\pythonProject2\common\base_api.py", line 57, in select_all
+    cursors = self.creat_connect()
+              │    └ <function SQL.creat_connect at 0x000001CD83F4C700>
+              └ <__main__.SQL object at 0x000001CD83F48A60>
+
+  File "D:\pythonProject2\common\base_api.py", line 31, in creat_connect
+    self.cursor = self.connection.cursor()
+    │    │        └ <__main__.SQL object at 0x000001CD83F48A60>
+    │    └ None
+    └ <__main__.SQL object at 0x000001CD83F48A60>
+
+AttributeError: 'SQL' object has no attribute 'connection'
+2022-11-10 17:46:18.514 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:name 'root' is not defined
+2022-11-10 17:46:18.514 | ERROR    | __main__:<module>:74 - An error has been caught in function '<module>', process 'MainProcess' (25932), thread 'MainThread' (26412):
+Traceback (most recent call last):
+
+> File "D:\pythonProject2\common\base_api.py", line 74, in <module>
+    SQL().select_one(table_name='testcase_cjxm', field_name='case_id', value_name='1')
+    └ <class '__main__.SQL'>
+
+  File "D:\pythonProject2\common\base_api.py", line 40, in select_one
+    cursors = self.creat_connect()
+              │    └ <function SQL.creat_connect at 0x0000022A06C1B670>
+              └ <__main__.SQL object at 0x0000022A06C18A60>
+
+  File "D:\pythonProject2\common\base_api.py", line 31, in creat_connect
+    self.cursor = self.connection.cursor()
+    │    │        └ <__main__.SQL object at 0x0000022A06C18A60>
+    │    └ None
+    └ <__main__.SQL object at 0x0000022A06C18A60>
+
+AttributeError: 'SQL' object has no attribute 'connection'
+2022-11-10 17:46:18.521 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:name 'root' is not defined
+2022-11-10 17:46:18.521 | ERROR    | __main__:<module>:75 - An error has been caught in function '<module>', process 'MainProcess' (25932), thread 'MainThread' (26412):
+Traceback (most recent call last):
+
+> File "D:\pythonProject2\common\base_api.py", line 75, in <module>
+    SQL().select_one()
+    └ <class '__main__.SQL'>
+
+  File "D:\pythonProject2\common\base_api.py", line 40, in select_one
+    cursors = self.creat_connect()
+              │    └ <function SQL.creat_connect at 0x0000022A06C1B670>
+              └ <__main__.SQL object at 0x0000022A06C18A60>
+
+  File "D:\pythonProject2\common\base_api.py", line 31, in creat_connect
+    self.cursor = self.connection.cursor()
+    │    │        └ <__main__.SQL object at 0x0000022A06C18A60>
+    │    └ None
+    └ <__main__.SQL object at 0x0000022A06C18A60>
+
+AttributeError: 'SQL' object has no attribute 'connection'
+2022-11-10 17:46:18.528 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:name 'root' is not defined
+2022-11-10 17:46:18.528 | ERROR    | __main__:<module>:76 - An error has been caught in function '<module>', process 'MainProcess' (25932), thread 'MainThread' (26412):
+Traceback (most recent call last):
+
+> File "D:\pythonProject2\common\base_api.py", line 76, in <module>
+    SQL().select_all(table_name="testcase_cjxm")
+    └ <class '__main__.SQL'>
+
+  File "D:\pythonProject2\common\base_api.py", line 57, in select_all
+    cursors = self.creat_connect()
+              │    └ <function SQL.creat_connect at 0x0000022A06C1B670>
+              └ <__main__.SQL object at 0x0000022A06C18A60>
+
+  File "D:\pythonProject2\common\base_api.py", line 31, in creat_connect
+    self.cursor = self.connection.cursor()
+    │    │        └ <__main__.SQL object at 0x0000022A06C18A60>
+    │    └ None
+    └ <__main__.SQL object at 0x0000022A06C18A60>
+
+AttributeError: 'SQL' object has no attribute 'connection'
+2022-11-10 17:47:15.601 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1130, "DESKTOP-QL4LSTJ' is not allowed to connect to this MySQL server")
+2022-11-10 17:47:15.602 | ERROR    | __main__:<module>:74 - An error has been caught in function '<module>', process 'MainProcess' (20916), thread 'MainThread' (20612):
+Traceback (most recent call last):
+
+> File "D:\pythonProject2\common\base_api.py", line 74, in <module>
+    SQL().select_one(table_name='testcase_cjxm', field_name='case_id', value_name='1')
+    └ <class '__main__.SQL'>
+
+  File "D:\pythonProject2\common\base_api.py", line 40, in select_one
+    cursors = self.creat_connect()
+              │    └ <function SQL.creat_connect at 0x00000252C6DCB700>
+              └ <__main__.SQL object at 0x00000252C6DC8A60>
+
+  File "D:\pythonProject2\common\base_api.py", line 31, in creat_connect
+    self.cursor = self.connection.cursor()
+    │    │        └ <__main__.SQL object at 0x00000252C6DC8A60>
+    │    └ None
+    └ <__main__.SQL object at 0x00000252C6DC8A60>
+
+AttributeError: 'SQL' object has no attribute 'connection'
+2022-11-10 17:47:15.608 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1130, "DESKTOP-QL4LSTJ' is not allowed to connect to this MySQL server")
+2022-11-10 17:47:15.608 | ERROR    | __main__:<module>:75 - An error has been caught in function '<module>', process 'MainProcess' (20916), thread 'MainThread' (20612):
+Traceback (most recent call last):
+
+> File "D:\pythonProject2\common\base_api.py", line 75, in <module>
+    SQL().select_one()
+    └ <class '__main__.SQL'>
+
+  File "D:\pythonProject2\common\base_api.py", line 40, in select_one
+    cursors = self.creat_connect()
+              │    └ <function SQL.creat_connect at 0x00000252C6DCB700>
+              └ <__main__.SQL object at 0x00000252C6DF7130>
+
+  File "D:\pythonProject2\common\base_api.py", line 31, in creat_connect
+    self.cursor = self.connection.cursor()
+    │    │        └ <__main__.SQL object at 0x00000252C6DF7130>
+    │    └ None
+    └ <__main__.SQL object at 0x00000252C6DF7130>
+
+AttributeError: 'SQL' object has no attribute 'connection'
+2022-11-10 17:47:15.611 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1130, "DESKTOP-QL4LSTJ' is not allowed to connect to this MySQL server")
+2022-11-10 17:47:15.612 | ERROR    | __main__:<module>:76 - An error has been caught in function '<module>', process 'MainProcess' (20916), thread 'MainThread' (20612):
+Traceback (most recent call last):
+
+> File "D:\pythonProject2\common\base_api.py", line 76, in <module>
+    SQL().select_all(table_name="testcase_cjxm")
+    └ <class '__main__.SQL'>
+
+  File "D:\pythonProject2\common\base_api.py", line 57, in select_all
+    cursors = self.creat_connect()
+              │    └ <function SQL.creat_connect at 0x00000252C6DCB700>
+              └ <__main__.SQL object at 0x00000252C6DF7130>
+
+  File "D:\pythonProject2\common\base_api.py", line 31, in creat_connect
+    self.cursor = self.connection.cursor()
+    │    │        └ <__main__.SQL object at 0x00000252C6DF7130>
+    │    └ None
+    └ <__main__.SQL object at 0x00000252C6DF7130>
+
+AttributeError: 'SQL' object has no attribute 'connection'
+2022-11-10 17:49:19.085 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1130, "DESKTOP-QL4LSTJ' is not allowed to connect to this MySQL server")
+2022-11-10 17:49:19.086 | ERROR    | __main__:<module>:74 - An error has been caught in function '<module>', process 'MainProcess' (12332), thread 'MainThread' (22504):
+Traceback (most recent call last):
+
+> File "D:\pythonProject2\common\base_api.py", line 74, in <module>
+    SQL().select_one(table_name='testcase_cjxm', field_name='case_id', value_name='1')
+    └ <class '__main__.SQL'>
+
+  File "D:\pythonProject2\common\base_api.py", line 40, in select_one
+    cursors = self.creat_connect()
+              │    └ <function SQL.creat_connect at 0x000001C5D535C700>
+              └ <__main__.SQL object at 0x000001C5D5359A60>
+
+  File "D:\pythonProject2\common\base_api.py", line 31, in creat_connect
+    self.cursor = self.connection.cursor()
+    │    │        └ <__main__.SQL object at 0x000001C5D5359A60>
+    │    └ None
+    └ <__main__.SQL object at 0x000001C5D5359A60>
+
+AttributeError: 'SQL' object has no attribute 'connection'
+2022-11-10 17:49:19.106 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1130, "DESKTOP-QL4LSTJ' is not allowed to connect to this MySQL server")
+2022-11-10 17:49:19.106 | ERROR    | __main__:<module>:75 - An error has been caught in function '<module>', process 'MainProcess' (12332), thread 'MainThread' (22504):
+Traceback (most recent call last):
+
+> File "D:\pythonProject2\common\base_api.py", line 75, in <module>
+    SQL().select_one()
+    └ <class '__main__.SQL'>
+
+  File "D:\pythonProject2\common\base_api.py", line 40, in select_one
+    cursors = self.creat_connect()
+              │    └ <function SQL.creat_connect at 0x000001C5D535C700>
+              └ <__main__.SQL object at 0x000001C5D5359A60>
+
+  File "D:\pythonProject2\common\base_api.py", line 31, in creat_connect
+    self.cursor = self.connection.cursor()
+    │    │        └ <__main__.SQL object at 0x000001C5D5359A60>
+    │    └ None
+    └ <__main__.SQL object at 0x000001C5D5359A60>
+
+AttributeError: 'SQL' object has no attribute 'connection'
+2022-11-10 17:49:19.122 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1130, "DESKTOP-QL4LSTJ' is not allowed to connect to this MySQL server")
+2022-11-10 17:49:19.122 | ERROR    | __main__:<module>:76 - An error has been caught in function '<module>', process 'MainProcess' (12332), thread 'MainThread' (22504):
+Traceback (most recent call last):
+
+> File "D:\pythonProject2\common\base_api.py", line 76, in <module>
+    SQL().select_all(table_name="testcase_cjxm")
+    └ <class '__main__.SQL'>
+
+  File "D:\pythonProject2\common\base_api.py", line 57, in select_all
+    cursors = self.creat_connect()
+              │    └ <function SQL.creat_connect at 0x000001C5D535C700>
+              └ <__main__.SQL object at 0x000001C5D5359A60>
+
+  File "D:\pythonProject2\common\base_api.py", line 31, in creat_connect
+    self.cursor = self.connection.cursor()
+    │    │        └ <__main__.SQL object at 0x000001C5D5359A60>
+    │    └ None
+    └ <__main__.SQL object at 0x000001C5D5359A60>
+
+AttributeError: 'SQL' object has no attribute 'connection'
+2022-11-10 17:51:39.505 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1130, "DESKTOP-QL4LSTJ' is not allowed to connect to this MySQL server")
+2022-11-10 17:51:39.506 | ERROR    | __main__:<module>:74 - An error has been caught in function '<module>', process 'MainProcess' (22784), thread 'MainThread' (22436):
+Traceback (most recent call last):
+
+> File "D:\pythonProject2\common\base_api.py", line 74, in <module>
+    SQL().select_one(table_name='testcase_cjxm', field_name='case_id', value_name='1')
+    └ <class '__main__.SQL'>
+
+  File "D:\pythonProject2\common\base_api.py", line 40, in select_one
+    cursors = self.creat_connect()
+              │    └ <function SQL.creat_connect at 0x00000219B827B700>
+              └ <__main__.SQL object at 0x00000219B8278A60>
+
+  File "D:\pythonProject2\common\base_api.py", line 31, in creat_connect
+    self.cursor = self.connection.cursor()
+    │    │        └ <__main__.SQL object at 0x00000219B8278A60>
+    │    └ None
+    └ <__main__.SQL object at 0x00000219B8278A60>
+
+AttributeError: 'SQL' object has no attribute 'connection'
+2022-11-10 17:51:39.511 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1130, "DESKTOP-QL4LSTJ' is not allowed to connect to this MySQL server")
+2022-11-10 17:51:39.512 | ERROR    | __main__:<module>:75 - An error has been caught in function '<module>', process 'MainProcess' (22784), thread 'MainThread' (22436):
+Traceback (most recent call last):
+
+> File "D:\pythonProject2\common\base_api.py", line 75, in <module>
+    SQL().select_one()
+    └ <class '__main__.SQL'>
+
+  File "D:\pythonProject2\common\base_api.py", line 40, in select_one
+    cursors = self.creat_connect()
+              │    └ <function SQL.creat_connect at 0x00000219B827B700>
+              └ <__main__.SQL object at 0x00000219B8278A60>
+
+  File "D:\pythonProject2\common\base_api.py", line 31, in creat_connect
+    self.cursor = self.connection.cursor()
+    │    │        └ <__main__.SQL object at 0x00000219B8278A60>
+    │    └ None
+    └ <__main__.SQL object at 0x00000219B8278A60>
+
+AttributeError: 'SQL' object has no attribute 'connection'
+2022-11-10 17:51:39.514 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1130, "DESKTOP-QL4LSTJ' is not allowed to connect to this MySQL server")
+2022-11-10 17:51:39.517 | ERROR    | __main__:<module>:76 - An error has been caught in function '<module>', process 'MainProcess' (22784), thread 'MainThread' (22436):
+Traceback (most recent call last):
+
+> File "D:\pythonProject2\common\base_api.py", line 76, in <module>
+    SQL().select_all(table_name="testcase_cjxm")
+    └ <class '__main__.SQL'>
+
+  File "D:\pythonProject2\common\base_api.py", line 57, in select_all
+    cursors = self.creat_connect()
+              │    └ <function SQL.creat_connect at 0x00000219B827B700>
+              └ <__main__.SQL object at 0x00000219B8278A60>
+
+  File "D:\pythonProject2\common\base_api.py", line 31, in creat_connect
+    self.cursor = self.connection.cursor()
+    │    │        └ <__main__.SQL object at 0x00000219B8278A60>
+    │    └ None
+    └ <__main__.SQL object at 0x00000219B8278A60>
+
+AttributeError: 'SQL' object has no attribute 'connection'
+2022-11-10 17:52:48.787 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1130, "DESKTOP-QL4LSTJ' is not allowed to connect to this MySQL server")
+2022-11-10 17:52:48.787 | ERROR    | __main__:<module>:74 - An error has been caught in function '<module>', process 'MainProcess' (30368), thread 'MainThread' (27516):
+Traceback (most recent call last):
+
+> File "D:\pythonProject2\common\base_api.py", line 74, in <module>
+    SQL().select_one(table_name='testcase_cjxm', field_name='case_id', value_name='1')
+    └ <class '__main__.SQL'>
+
+  File "D:\pythonProject2\common\base_api.py", line 40, in select_one
+    cursors = self.creat_connect()
+              │    └ <function SQL.creat_connect at 0x00000273F549B700>
+              └ <__main__.SQL object at 0x00000273F5498A60>
+
+  File "D:\pythonProject2\common\base_api.py", line 31, in creat_connect
+    self.cursor = self.connection.cursor()
+    │    │        └ <__main__.SQL object at 0x00000273F5498A60>
+    │    └ None
+    └ <__main__.SQL object at 0x00000273F5498A60>
+
+AttributeError: 'SQL' object has no attribute 'connection'
+2022-11-10 17:52:48.812 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1130, "DESKTOP-QL4LSTJ' is not allowed to connect to this MySQL server")
+2022-11-10 17:52:48.812 | ERROR    | __main__:<module>:75 - An error has been caught in function '<module>', process 'MainProcess' (30368), thread 'MainThread' (27516):
+Traceback (most recent call last):
+
+> File "D:\pythonProject2\common\base_api.py", line 75, in <module>
+    SQL().select_one()
+    └ <class '__main__.SQL'>
+
+  File "D:\pythonProject2\common\base_api.py", line 40, in select_one
+    cursors = self.creat_connect()
+              │    └ <function SQL.creat_connect at 0x00000273F549B700>
+              └ <__main__.SQL object at 0x00000273F5498A60>
+
+  File "D:\pythonProject2\common\base_api.py", line 31, in creat_connect
+    self.cursor = self.connection.cursor()
+    │    │        └ <__main__.SQL object at 0x00000273F5498A60>
+    │    └ None
+    └ <__main__.SQL object at 0x00000273F5498A60>
+
+AttributeError: 'SQL' object has no attribute 'connection'
+2022-11-10 17:52:48.816 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1130, "DESKTOP-QL4LSTJ' is not allowed to connect to this MySQL server")
+2022-11-10 17:52:48.816 | ERROR    | __main__:<module>:76 - An error has been caught in function '<module>', process 'MainProcess' (30368), thread 'MainThread' (27516):
+Traceback (most recent call last):
+
+> File "D:\pythonProject2\common\base_api.py", line 76, in <module>
+    SQL().select_all(table_name="testcase_cjxm")
+    └ <class '__main__.SQL'>
+
+  File "D:\pythonProject2\common\base_api.py", line 57, in select_all
+    cursors = self.creat_connect()
+              │    └ <function SQL.creat_connect at 0x00000273F549B700>
+              └ <__main__.SQL object at 0x00000273F5498A60>
+
+  File "D:\pythonProject2\common\base_api.py", line 31, in creat_connect
+    self.cursor = self.connection.cursor()
+    │    │        └ <__main__.SQL object at 0x00000273F5498A60>
+    │    └ None
+    └ <__main__.SQL object at 0x00000273F5498A60>
+
+AttributeError: 'SQL' object has no attribute 'connection'
+2022-11-10 18:02:30.318 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1130, "DESKTOP-QL4LSTJ' is not allowed to connect to this MySQL server")
+2022-11-10 18:02:30.319 | ERROR    | __main__:<module>:74 - An error has been caught in function '<module>', process 'MainProcess' (31084), thread 'MainThread' (30976):
+Traceback (most recent call last):
+
+> File "D:\pythonProject2\common\base_api.py", line 74, in <module>
+    SQL().select_one(table_name='testcase_cjxm', field_name='case_id', value_name='1')
+    └ <class '__main__.SQL'>
+
+  File "D:\pythonProject2\common\base_api.py", line 40, in select_one
+    cursors = self.creat_connect()
+              │    └ <function SQL.creat_connect at 0x00000244879CC700>
+              └ <__main__.SQL object at 0x00000244879C8A60>
+
+  File "D:\pythonProject2\common\base_api.py", line 31, in creat_connect
+    self.cursor = self.connection.cursor()
+    │    │        └ <__main__.SQL object at 0x00000244879C8A60>
+    │    └ None
+    └ <__main__.SQL object at 0x00000244879C8A60>
+
+AttributeError: 'SQL' object has no attribute 'connection'
+2022-11-10 18:02:30.346 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1130, "DESKTOP-QL4LSTJ' is not allowed to connect to this MySQL server")
+2022-11-10 18:02:30.347 | ERROR    | __main__:<module>:75 - An error has been caught in function '<module>', process 'MainProcess' (31084), thread 'MainThread' (30976):
+Traceback (most recent call last):
+
+> File "D:\pythonProject2\common\base_api.py", line 75, in <module>
+    SQL().select_one()
+    └ <class '__main__.SQL'>
+
+  File "D:\pythonProject2\common\base_api.py", line 40, in select_one
+    cursors = self.creat_connect()
+              │    └ <function SQL.creat_connect at 0x00000244879CC700>
+              └ <__main__.SQL object at 0x00000244879C8A60>
+
+  File "D:\pythonProject2\common\base_api.py", line 31, in creat_connect
+    self.cursor = self.connection.cursor()
+    │    │        └ <__main__.SQL object at 0x00000244879C8A60>
+    │    └ None
+    └ <__main__.SQL object at 0x00000244879C8A60>
+
+AttributeError: 'SQL' object has no attribute 'connection'
+2022-11-10 18:02:30.362 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1130, "DESKTOP-QL4LSTJ' is not allowed to connect to this MySQL server")
+2022-11-10 18:02:30.362 | ERROR    | __main__:<module>:76 - An error has been caught in function '<module>', process 'MainProcess' (31084), thread 'MainThread' (30976):
+Traceback (most recent call last):
+
+> File "D:\pythonProject2\common\base_api.py", line 76, in <module>
+    SQL().select_all(table_name="testcase_cjxm")
+    └ <class '__main__.SQL'>
+
+  File "D:\pythonProject2\common\base_api.py", line 57, in select_all
+    cursors = self.creat_connect()
+              │    └ <function SQL.creat_connect at 0x00000244879CC700>
+              └ <__main__.SQL object at 0x00000244879C8A60>
+
+  File "D:\pythonProject2\common\base_api.py", line 31, in creat_connect
+    self.cursor = self.connection.cursor()
+    │    │        └ <__main__.SQL object at 0x00000244879C8A60>
+    │    └ None
+    └ <__main__.SQL object at 0x00000244879C8A60>
+
+AttributeError: 'SQL' object has no attribute 'connection'
+2022-11-10 18:08:28.410 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(2003, "Can't connect to MySQL server on '192.168.1.163' ([WinError 10061] 由于目标计算机积极拒绝，无法连接。)")
+2022-11-10 18:08:28.411 | ERROR    | __main__:<module>:74 - An error has been caught in function '<module>', process 'MainProcess' (31688), thread 'MainThread' (31132):
+Traceback (most recent call last):
+
+> File "D:\pythonProject2\common\base_api.py", line 74, in <module>
+    SQL().select_one(table_name='testcase_cjxm', field_name='case_id', value_name='1')
+    └ <class '__main__.SQL'>
+
+  File "D:\pythonProject2\common\base_api.py", line 40, in select_one
+    cursors = self.creat_connect()
+              │    └ <function SQL.creat_connect at 0x0000024D780EC700>
+              └ <__main__.SQL object at 0x0000024D780E8A60>
+
+  File "D:\pythonProject2\common\base_api.py", line 31, in creat_connect
+    self.cursor = self.connection.cursor()
+    │    │        └ <__main__.SQL object at 0x0000024D780E8A60>
+    │    └ None
+    └ <__main__.SQL object at 0x0000024D780E8A60>
+
+AttributeError: 'SQL' object has no attribute 'connection'
+2022-11-10 18:08:30.459 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(2003, "Can't connect to MySQL server on '192.168.1.163' ([WinError 10061] 由于目标计算机积极拒绝，无法连接。)")
+2022-11-10 18:08:30.459 | ERROR    | __main__:<module>:75 - An error has been caught in function '<module>', process 'MainProcess' (31688), thread 'MainThread' (31132):
+Traceback (most recent call last):
+
+> File "D:\pythonProject2\common\base_api.py", line 75, in <module>
+    SQL().select_one()
+    └ <class '__main__.SQL'>
+
+  File "D:\pythonProject2\common\base_api.py", line 40, in select_one
+    cursors = self.creat_connect()
+              │    └ <function SQL.creat_connect at 0x0000024D780EC700>
+              └ <__main__.SQL object at 0x0000024D780E8F40>
+
+  File "D:\pythonProject2\common\base_api.py", line 31, in creat_connect
+    self.cursor = self.connection.cursor()
+    │    │        └ <__main__.SQL object at 0x0000024D780E8F40>
+    │    └ None
+    └ <__main__.SQL object at 0x0000024D780E8F40>
+
+AttributeError: 'SQL' object has no attribute 'connection'
+2022-11-10 18:08:32.489 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(2003, "Can't connect to MySQL server on '192.168.1.163' ([WinError 10061] 由于目标计算机积极拒绝，无法连接。)")
+2022-11-10 18:08:32.490 | ERROR    | __main__:<module>:76 - An error has been caught in function '<module>', process 'MainProcess' (31688), thread 'MainThread' (31132):
+Traceback (most recent call last):
+
+> File "D:\pythonProject2\common\base_api.py", line 76, in <module>
+    SQL().select_all(table_name="testcase_cjxm")
+    └ <class '__main__.SQL'>
+
+  File "D:\pythonProject2\common\base_api.py", line 57, in select_all
+    cursors = self.creat_connect()
+              │    └ <function SQL.creat_connect at 0x0000024D780EC700>
+              └ <__main__.SQL object at 0x0000024D781163A0>
+
+  File "D:\pythonProject2\common\base_api.py", line 31, in creat_connect
+    self.cursor = self.connection.cursor()
+    │    │        └ <__main__.SQL object at 0x0000024D781163A0>
+    │    └ None
+    └ <__main__.SQL object at 0x0000024D781163A0>
+
+AttributeError: 'SQL' object has no attribute 'connection'
+2022-11-10 18:12:06.781 | WARNING  | __main__:select_one:46 - SQL语句执行异常，请检查SQL语句:select * from testcase_cjxm where case_id = "1",异常:(1146, "Table 'guest.testcase_cjxm' doesn't exist")
+2022-11-10 18:12:06.806 | WARNING  | __main__:select_one:46 - SQL语句执行异常，请检查SQL语句:select * from None where None = "None",异常:(1146, "Table 'guest.none' doesn't exist")
+2022-11-10 18:12:06.822 | WARNING  | __main__:select_all:63 - SQL语句执行异常，请检查SQL语句:select * from testcase_cjxm,异常:(1146, "Table 'guest.testcase_cjxm' doesn't exist")
+2022-11-10 18:30:23.122 | WARNING  | __main__:select_one:46 - SQL语句执行异常，请检查SQL语句:select * from testcase_cjxm where case_id = "1",异常:(1146, "Table 'guest.testcase_cjxm' doesn't exist")
+2022-11-10 18:30:23.141 | WARNING  | __main__:select_one:46 - SQL语句执行异常，请检查SQL语句:select * from None where None = "None",异常:(1054, "Unknown column 'None' in 'where clause'")
+2022-11-10 18:30:23.158 | WARNING  | __main__:select_all:63 - SQL语句执行异常，请检查SQL语句:select * from testcase_cjxm,异常:(1146, "Table 'guest.testcase_cjxm' doesn't exist")
+2022-11-10 18:30:52.474 | WARNING  | __main__:select_one:46 - SQL语句执行异常，请检查SQL语句:select * from testcase_cjxm where case_id = "1",异常:(1146, "Table 'guest.testcase_cjxm' doesn't exist")
+2022-11-10 18:30:52.495 | WARNING  | __main__:select_one:46 - SQL语句执行异常，请检查SQL语句:select * from None where None = "None",异常:(1054, "Unknown column 'None' in 'where clause'")
+2022-11-10 18:30:52.500 | WARNING  | __main__:select_all:63 - SQL语句执行异常，请检查SQL语句:select * from testcase_cjxm,异常:(1146, "Table 'guest.testcase_cjxm' doesn't exist")
+2022-11-10 18:32:02.590 | WARNING  | __main__:select_one:46 - SQL语句执行异常，请检查SQL语句:select * from testcase_cjxm where case_id = "1",异常:(1054, "Unknown column 'case_id' in 'where clause'")
+2022-11-10 18:32:02.604 | WARNING  | __main__:select_one:46 - SQL语句执行异常，请检查SQL语句:select * from None where None = "None",异常:(1054, "Unknown column 'None' in 'where clause'")
+2022-11-10 18:32:58.998 | WARNING  | __main__:select_one:46 - SQL语句执行异常，请检查SQL语句:select * from testcase_cjxm where case_id = "1",异常:(1054, "Unknown column 'case_id' in 'where clause'")
+2022-11-10 18:32:59.001 | WARNING  | __main__:select_one:46 - SQL语句执行异常，请检查SQL语句:select * from None where None = "None",异常:(1054, "Unknown column 'None' in 'where clause'")
+2022-11-10 18:33:25.682 | WARNING  | __main__:select_one:46 - SQL语句执行异常，请检查SQL语句:select * from testcase_cjxm where case_id = "1",异常:(1054, "Unknown column 'case_id' in 'where clause'")
+2022-11-10 18:33:25.685 | WARNING  | __main__:select_one:46 - SQL语句执行异常，请检查SQL语句:select * from None where None = "None",异常:(1054, "Unknown column 'None' in 'where clause'")
+2022-11-10 18:33:51.827 | WARNING  | __main__:select_one:46 - SQL语句执行异常，请检查SQL语句:select * from None where None = "None",异常:(1054, "Unknown column 'None' in 'where clause'")

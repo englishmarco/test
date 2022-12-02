@@ -1,0 +1,30 @@
+2022-11-11 09:53:05.201 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-11 09:53:05.223 | SUCCESS  | __main__:__init__:27 - 连接数据库成功
+2022-11-11 09:53:05.224 | SUCCESS  | __main__:select_one:44 - 执行查询SQL语句:select * from testcase_cjxm where case_id = "1"
+2022-11-11 09:53:05.224 | SUCCESS  | __main__:select_one:49 - 数据库返回查询数据:[{'case_id': 1}]
+2022-11-11 09:53:05.225 | SUCCESS  | __main__:close_base:36 - 关闭数据库成功
+2022-11-11 09:53:05.226 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-11 09:53:05.252 | SUCCESS  | __main__:__init__:27 - 连接数据库成功
+2022-11-11 09:53:05.253 | SUCCESS  | __main__:select_one:44 - 执行查询SQL语句:select * from None where None = "None"
+2022-11-11 09:53:05.253 | SUCCESS  | __main__:select_one:49 - 数据库返回查询数据:()
+2022-11-11 09:53:05.254 | SUCCESS  | __main__:close_base:36 - 关闭数据库成功
+2022-11-11 09:53:05.255 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-11 09:53:05.256 | SUCCESS  | __main__:__init__:27 - 连接数据库成功
+2022-11-11 09:53:05.258 | SUCCESS  | __main__:select_all:61 - 执行查询SQL语句:select * from testcase_cjxm
+2022-11-11 09:53:05.258 | SUCCESS  | __main__:select_all:66 - 数据库返回查询数据:[{'case_id': 1}]
+2022-11-11 09:53:05.259 | SUCCESS  | __main__:close_base:36 - 关闭数据库成功
+2022-11-11 15:05:04.484 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-11 15:05:04.493 | SUCCESS  | __main__:__init__:27 - 连接数据库成功
+2022-11-11 15:05:04.495 | SUCCESS  | __main__:select_one:44 - 执行查询SQL语句:select * from testcase_cjxm where case_id = "1"
+2022-11-11 15:05:04.495 | SUCCESS  | __main__:select_one:49 - 数据库返回查询数据:[{'case_id': 1, 'case_num': 'test_CJXM_001', 'title': '注册接口', 'url': '/api/user/user_reg', 'method': 'POST', 'body': "{'username':'abctest','pwd':'Aa123456','cpwd':'Aa123456'}", 'headers': None, 'assert': "{'error_code':0},{'error_code':3005}", 'status': '200', 'token': None}]
+2022-11-11 15:05:04.495 | SUCCESS  | __main__:close_base:36 - 关闭数据库成功
+2022-11-11 15:05:04.496 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-11 15:05:04.507 | SUCCESS  | __main__:__init__:27 - 连接数据库成功
+2022-11-11 15:05:04.509 | SUCCESS  | __main__:select_one:44 - 执行查询SQL语句:select * from None where None = "None"
+2022-11-11 15:05:04.509 | SUCCESS  | __main__:select_one:49 - 数据库返回查询数据:()
+2022-11-11 15:05:04.510 | SUCCESS  | __main__:close_base:36 - 关闭数据库成功
+2022-11-11 15:05:04.511 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-11 15:05:04.524 | SUCCESS  | __main__:__init__:27 - 连接数据库成功
+2022-11-11 15:05:04.525 | SUCCESS  | __main__:select_all:61 - 执行查询SQL语句:select * from testcase_cjxm
+2022-11-11 15:05:04.525 | SUCCESS  | __main__:select_all:66 - 数据库返回查询数据:[{'case_id': 1, 'case_num': 'test_CJXM_001', 'title': '注册接口', 'url': '/api/user/user_reg', 'method': 'POST', 'body': "{'username':'abctest','pwd':'Aa123456','cpwd':'Aa123456'}", 'headers': None, 'assert': "{'error_code':0},{'error_code':3005}", 'status': '200', 'token': None}, {'case_id': 2, 'case_num': 'test_CJXM_002', 'title': '登录', 'url': '/api/user/login', 'method': 'POST', 'body': "{ 'username': 'mytest','passwd': 'Abc123'}", 'headers': None, 'assert': "{'error_code':0}", 'status': '200', 'token': None}, {'case_id': 3, 'case_num': 'test_CJXM_003', 'title': '添加奖品(需上传文件)', 'url': '/api/product/add', 'method': 'POST', 'body': "{'name': '奖品名字2020', 'sign': 'b44109efbfe1007c1ad93a757d78e459', 'userid': '78926'}", 'headers': None, 'assert': "{'msg':'必须是管理员才可以添加奖品'}", 'status': '200', 'token': None}, {'case_id': 4, 'case_num': 'test_CJXM_004', 'title': '抽奖接口', 'url': '/api/product/choice', 'method': 'GET', 'body': "{'sign': 'b44109efbfe1007c1ad93a757d78e459', 'userid': '78926'}", 'headers': None, 'assert': "{'error_code':0},{'error_code':1099}", 'status': '200', 'token': None}, {'case_id': 5, 'case_num': 'test_CJXM_005', 'title': '查看中奖记录', 'url': '/api/user/win_record', 'method': 'GET', 'body': "{'sign': 'b44109efbfe1007c1ad93a757d78e459', 'userid': '78926'}", 'headers': None, 'assert': "{'error_code':0}", 'status': '200', 'token': None}, {'case_id': 6, 'case_num': 'test_CJXM_006', 'title': '获取所有奖品信息', 'url': '/api/product/all', 'method': 'GET', 'body': None, 'headers': None, 'assert': "{'error_code':0}", 'status': '200', 'token': None}]
+2022-11-11 15:05:04.525 | SUCCESS  | __main__:close_base:36 - 关闭数据库成功

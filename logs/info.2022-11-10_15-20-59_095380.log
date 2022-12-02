@@ -1,0 +1,249 @@
+2020-08-13 15:00:43.405 | INFO     | common.base_api:__init__:16 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2020-08-13 15:00:43.416 | SUCCESS  | common.base_api:__init__:27 - 连接数据库成功
+2020-08-13 15:00:43.419 | SUCCESS  | common.base_api:select_all:61 - 执行查询SQL语句:select * from testcase_cjxm
+2020-08-13 15:00:43.421 | SUCCESS  | common.base_api:select_all:66 - 数据库返回查询数据:[{'case_id': 1, 'case_num': 'test_CJXM_001', 'title': '注册接口', 'url': '/api/user/user_reg', 'method': 'POST', 'body': "{'username':'abctest','pwd':'Aa123456','cpwd':'Aa123456'}", 'headers': None, 'assert': "{'error_code':0},{'error_code':3005}", 'status': '200', 'token': None}, {'case_id': 2, 'case_num': 'test_CJXM_002', 'title': '登录', 'url': '/api/user/login', 'method': 'POST', 'body': "{ 'username': 'mytest','passwd': 'Abc123'}", 'headers': None, 'assert': "{'error_code':0}", 'status': '200', 'token': None}, {'case_id': 3, 'case_num': 'test_CJXM_003', 'title': '添加奖品(需上传文件)', 'url': '/api/product/add', 'method': 'POST', 'body': "{'name': '奖品名字2020', 'sign': 'b44109efbfe1007c1ad93a757d78e459', 'userid': '78926'}", 'headers': None, 'assert': "{'msg':'必须是管理员才可以添加奖品'}", 'status': '200', 'token': None}, {'case_id': 4, 'case_num': 'test_CJXM_004', 'title': '抽奖接口', 'url': '/api/product/choice', 'method': 'GET', 'body': "{'sign': 'b44109efbfe1007c1ad93a757d78e459', 'userid': '78926'}", 'headers': None, 'assert': "{'error_code':0},{'error_code':1099}", 'status': '200', 'token': None}, {'case_id': 5, 'case_num': 'test_CJXM_005', 'title': '查看中奖记录', 'url': '/api/user/win_record', 'method': 'GET', 'body': "{'sign': 'b44109efbfe1007c1ad93a757d78e459', 'userid': '78926'}", 'headers': None, 'assert': "{'error_code':0}", 'status': '200', 'token': None}, {'case_id': 6, 'case_num': 'test_CJXM_006', 'title': '获取所有奖品信息', 'url': '/api/product/all', 'method': 'GET', 'body': None, 'headers': None, 'assert': "{'error_code':0}", 'status': '200', 'token': None}]
+2020-08-13 15:00:43.423 | SUCCESS  | common.base_api:close_base:36 - 关闭数据库成功
+2020-08-13 15:00:43.430 | INFO     | common.base_api:__init__:16 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2020-08-13 15:00:43.435 | SUCCESS  | common.base_api:__init__:27 - 连接数据库成功
+2020-08-13 15:00:43.437 | SUCCESS  | common.base_api:select_all:61 - 执行查询SQL语句:select * from testcase_ndxs
+2020-08-13 15:00:43.439 | SUCCESS  | common.base_api:select_all:66 - 数据库返回查询数据:[{'case_id': 1, 'case_num': 'test_NDXS_001', 'title': '获取学生信息', 'url': '/api/user/stu_info', 'method': 'GET', 'body': "{'stu_name':'小草'}", 'headers': None, 'assert': "{'error_code':0}", 'status': None, 'token': None}, {'case_id': 2, 'case_num': 'test_NDXS_002', 'title': '登录', 'url': '/api/user/login', 'method': 'POST', 'body': "{'username':'mytest','passwd':'Abc123'}", 'headers': None, 'assert': "{'error_code':0}", 'status': None, 'token': None}, {'case_id': 3, 'case_num': 'test_NDXS_003', 'title': '添加学生信息', 'url': '/api/user/add_stu', 'method': 'POST', 'body': "{'name': 'mytest', 'grade': '计算机2020班', 'phone': '13512341234'}", 'headers': None, 'assert': "{'msg':'手机号已经存在'}", 'status': None, 'token': ''}, {'case_id': 4, 'case_num': 'test_NDXS_004', 'title': '学生金币充值', 'url': '/api/user/gold_add', 'method': 'POST', 'body': "{'stu_id':'100002630','gold': 1}", 'headers': None, 'assert': "{'msg':'请登陆'}", 'status': None, 'token': 'b44109efbfe1007c1ad93a757d78e459'}, {'case_id': 5, 'case_num': 'test_NDXS_005', 'title': '获取所有学生信息', 'url': '/api/user/all_stu', 'method': 'GET', 'body': None, 'headers': "{'Referer':'http://api.nnzhp.cn/'}", 'assert': None, 'status': None, 'token': None}, {'case_id': 6, 'case_num': 'test_NDXS_006', 'title': '文件上传', 'url': '/api/file/file_upload', 'method': 'POST', 'body': None, 'headers': None, 'assert': "{'msg':'操作成功'}", 'status': None, 'token': None}]
+2020-08-13 15:00:43.442 | SUCCESS  | common.base_api:close_base:36 - 关闭数据库成功
+2020-08-13 15:00:43.451 | INFO     | common.requests_api:auto_request:29 - 开始请求接口:http://api.nnzhp.cn/api/user/login
+2020-08-13 15:00:43.617 | SUCCESS  | common.requests_api:auto_request:35 - 接口请求成功，等待返回数据。请求URL:http://api.nnzhp.cn/api/user/login
+2020-08-13 15:00:43.620 | SUCCESS  | common.requests_api:auto_request:47 - 接口请求执行成功，返回数据成功
+2020-08-13 15:00:43.622 | INFO     | common.requests_api:auto_request:51 - 接口执行完毕
+2020-08-13 15:00:43.624 | INFO     | common.requests_api:auto_request:29 - 开始请求接口:http://api.nnzhp.cn/api/product/choice
+2020-08-13 15:00:43.716 | SUCCESS  | common.requests_api:auto_request:32 - 接口请求成功，等待返回数据。请求URL:http://api.nnzhp.cn/api/product/choice?sign=0144ba91d5e5dfdbed120faf79058144&userid=78926
+2020-08-13 15:00:43.720 | SUCCESS  | common.requests_api:auto_request:43 - 接口请求执行成功，返回数据成功
+2020-08-13 15:00:43.723 | INFO     | common.requests_api:auto_request:51 - 接口执行完毕
+2020-08-13 15:00:43.725 | INFO     | common.requests_api:auto_request:29 - 开始请求接口:http://api.nnzhp.cn/api/user/login
+2020-08-13 15:00:43.837 | SUCCESS  | common.requests_api:auto_request:35 - 接口请求成功，等待返回数据。请求URL:http://api.nnzhp.cn/api/user/login
+2020-08-13 15:00:43.840 | SUCCESS  | common.requests_api:auto_request:47 - 接口请求执行成功，返回数据成功
+2020-08-13 15:00:43.842 | INFO     | common.requests_api:auto_request:51 - 接口执行完毕
+2020-08-13 15:00:43.844 | INFO     | common.requests_api:auto_request:29 - 开始请求接口:http://api.nnzhp.cn/api/user/win_record
+2020-08-13 15:00:43.994 | SUCCESS  | common.requests_api:auto_request:32 - 接口请求成功，等待返回数据。请求URL:http://api.nnzhp.cn/api/user/win_record?sign=0144ba91d5e5dfdbed120faf79058144&userid=78926
+2020-08-13 15:00:43.996 | SUCCESS  | common.requests_api:auto_request:43 - 接口请求执行成功，返回数据成功
+2020-08-13 15:00:43.998 | INFO     | common.requests_api:auto_request:51 - 接口执行完毕
+2020-08-13 15:00:44.001 | INFO     | common.requests_api:auto_request:29 - 开始请求接口:http://api.nnzhp.cn/api/user/login
+2020-08-13 15:00:44.145 | SUCCESS  | common.requests_api:auto_request:35 - 接口请求成功，等待返回数据。请求URL:http://api.nnzhp.cn/api/user/login
+2020-08-13 15:00:44.148 | SUCCESS  | common.requests_api:auto_request:47 - 接口请求执行成功，返回数据成功
+2020-08-13 15:00:44.150 | INFO     | common.requests_api:auto_request:51 - 接口执行完毕
+2020-08-13 15:00:44.152 | INFO     | common.requests_api:auto_request:29 - 开始请求接口:http://api.nnzhp.cn/api/product/all
+2020-08-13 15:00:46.066 | SUCCESS  | common.requests_api:auto_request:32 - 接口请求成功，等待返回数据。请求URL:http://api.nnzhp.cn/api/product/all
+2020-08-13 15:00:46.070 | SUCCESS  | common.requests_api:auto_request:43 - 接口请求执行成功，返回数据成功
+2020-08-13 15:00:47.540 | INFO     | common.requests_api:auto_request:51 - 接口执行完毕
+2020-08-13 15:00:47.575 | INFO     | common.requests_api:auto_request:29 - 开始请求接口:http://api.nnzhp.cn/api/product/add
+2020-08-13 15:00:47.856 | SUCCESS  | common.requests_api:auto_request:35 - 接口请求成功，等待返回数据。请求URL:http://api.nnzhp.cn/api/product/add
+2020-08-13 15:00:47.859 | SUCCESS  | common.requests_api:auto_request:47 - 接口请求执行成功，返回数据成功
+2020-08-13 15:00:47.861 | INFO     | common.requests_api:auto_request:51 - 接口执行完毕
+2020-08-13 15:00:47.864 | INFO     | common.requests_api:auto_request:29 - 开始请求接口:http://api.nnzhp.cn/api/user/user_reg
+2020-08-13 15:00:48.001 | SUCCESS  | common.requests_api:auto_request:35 - 接口请求成功，等待返回数据。请求URL:http://api.nnzhp.cn/api/user/user_reg
+2020-08-13 15:00:48.004 | SUCCESS  | common.requests_api:auto_request:47 - 接口请求执行成功，返回数据成功
+2020-08-13 15:00:48.007 | INFO     | common.requests_api:auto_request:51 - 接口执行完毕
+2020-08-13 15:00:48.038 | INFO     | common.requests_api:auto_request:29 - 开始请求接口:http://api.nnzhp.cn/api/user/login
+2020-08-13 15:00:48.156 | SUCCESS  | common.requests_api:auto_request:35 - 接口请求成功，等待返回数据。请求URL:http://api.nnzhp.cn/api/user/login
+2020-08-13 15:00:48.160 | SUCCESS  | common.requests_api:auto_request:47 - 接口请求执行成功，返回数据成功
+2020-08-13 15:00:48.162 | INFO     | common.requests_api:auto_request:51 - 接口执行完毕
+2020-08-13 15:00:48.167 | INFO     | common.requests_api:auto_request:29 - 开始请求接口:http://api.nnzhp.cn/api/product/choice
+2020-08-13 15:00:48.296 | SUCCESS  | common.requests_api:auto_request:32 - 接口请求成功，等待返回数据。请求URL:http://api.nnzhp.cn/api/product/choice?sign=0144ba91d5e5dfdbed120faf79058144&userid=78926
+2020-08-13 15:00:48.299 | SUCCESS  | common.requests_api:auto_request:43 - 接口请求执行成功，返回数据成功
+2020-08-13 15:00:48.303 | INFO     | common.requests_api:auto_request:51 - 接口执行完毕
+2020-08-13 15:00:48.305 | INFO     | common.requests_api:auto_request:29 - 开始请求接口:http://api.nnzhp.cn/api/user/login
+2020-08-13 15:00:48.438 | SUCCESS  | common.requests_api:auto_request:35 - 接口请求成功，等待返回数据。请求URL:http://api.nnzhp.cn/api/user/login
+2020-08-13 15:00:48.442 | SUCCESS  | common.requests_api:auto_request:47 - 接口请求执行成功，返回数据成功
+2020-08-13 15:00:48.446 | INFO     | common.requests_api:auto_request:51 - 接口执行完毕
+2020-08-13 15:00:48.448 | INFO     | common.requests_api:auto_request:29 - 开始请求接口:http://api.nnzhp.cn/api/user/win_record
+2020-08-13 15:00:48.572 | SUCCESS  | common.requests_api:auto_request:32 - 接口请求成功，等待返回数据。请求URL:http://api.nnzhp.cn/api/user/win_record?sign=0144ba91d5e5dfdbed120faf79058144&userid=78926
+2020-08-13 15:00:48.575 | SUCCESS  | common.requests_api:auto_request:43 - 接口请求执行成功，返回数据成功
+2020-08-13 15:00:48.578 | INFO     | common.requests_api:auto_request:51 - 接口执行完毕
+2020-08-13 15:00:48.581 | INFO     | common.requests_api:auto_request:29 - 开始请求接口:http://api.nnzhp.cn/api/user/login
+2020-08-13 15:00:48.669 | SUCCESS  | common.requests_api:auto_request:35 - 接口请求成功，等待返回数据。请求URL:http://api.nnzhp.cn/api/user/login
+2020-08-13 15:00:48.672 | SUCCESS  | common.requests_api:auto_request:47 - 接口请求执行成功，返回数据成功
+2020-08-13 15:00:48.675 | INFO     | common.requests_api:auto_request:51 - 接口执行完毕
+2020-08-13 15:00:48.677 | INFO     | common.requests_api:auto_request:29 - 开始请求接口:http://api.nnzhp.cn/api/product/all
+2020-08-13 15:00:50.525 | SUCCESS  | common.requests_api:auto_request:32 - 接口请求成功，等待返回数据。请求URL:http://api.nnzhp.cn/api/product/all
+2020-08-13 15:00:50.529 | SUCCESS  | common.requests_api:auto_request:43 - 接口请求执行成功，返回数据成功
+2020-08-13 15:00:51.944 | INFO     | common.requests_api:auto_request:51 - 接口执行完毕
+2020-08-13 15:00:51.980 | INFO     | common.requests_api:auto_request:29 - 开始请求接口:http://api.nnzhp.cn/api/product/add
+2020-08-13 15:00:52.215 | SUCCESS  | common.requests_api:auto_request:35 - 接口请求成功，等待返回数据。请求URL:http://api.nnzhp.cn/api/product/add
+2020-08-13 15:00:52.218 | SUCCESS  | common.requests_api:auto_request:47 - 接口请求执行成功，返回数据成功
+2020-08-13 15:00:52.220 | INFO     | common.requests_api:auto_request:51 - 接口执行完毕
+2020-08-13 15:00:52.222 | INFO     | common.requests_api:auto_request:29 - 开始请求接口:http://api.nnzhp.cn/api/user/user_reg
+2020-08-13 15:00:52.312 | SUCCESS  | common.requests_api:auto_request:35 - 接口请求成功，等待返回数据。请求URL:http://api.nnzhp.cn/api/user/user_reg
+2020-08-13 15:00:52.316 | SUCCESS  | common.requests_api:auto_request:47 - 接口请求执行成功，返回数据成功
+2020-08-13 15:00:52.318 | INFO     | common.requests_api:auto_request:51 - 接口执行完毕
+2020-08-13 15:00:52.323 | INFO     | common.requests_api:auto_request:29 - 开始请求接口:http://api.nnzhp.cn/api/user/login
+2020-08-13 15:00:52.419 | SUCCESS  | common.requests_api:auto_request:35 - 接口请求成功，等待返回数据。请求URL:http://api.nnzhp.cn/api/user/login
+2020-08-13 15:00:52.423 | SUCCESS  | common.requests_api:auto_request:47 - 接口请求执行成功，返回数据成功
+2020-08-13 15:00:52.425 | INFO     | common.requests_api:auto_request:51 - 接口执行完毕
+2020-08-13 15:00:52.427 | INFO     | common.requests_api:auto_request:29 - 开始请求接口:http://api.nnzhp.cn/api/product/choice
+2020-08-13 15:00:52.518 | SUCCESS  | common.requests_api:auto_request:32 - 接口请求成功，等待返回数据。请求URL:http://api.nnzhp.cn/api/product/choice?sign=0144ba91d5e5dfdbed120faf79058144&userid=78926
+2020-08-13 15:00:52.521 | SUCCESS  | common.requests_api:auto_request:43 - 接口请求执行成功，返回数据成功
+2020-08-13 15:00:52.524 | INFO     | common.requests_api:auto_request:51 - 接口执行完毕
+2020-08-13 15:00:52.526 | INFO     | common.requests_api:auto_request:29 - 开始请求接口:http://api.nnzhp.cn/api/user/login
+2020-08-13 15:00:52.618 | SUCCESS  | common.requests_api:auto_request:35 - 接口请求成功，等待返回数据。请求URL:http://api.nnzhp.cn/api/user/login
+2020-08-13 15:00:52.621 | SUCCESS  | common.requests_api:auto_request:47 - 接口请求执行成功，返回数据成功
+2020-08-13 15:00:52.623 | INFO     | common.requests_api:auto_request:51 - 接口执行完毕
+2020-08-13 15:00:52.625 | INFO     | common.requests_api:auto_request:29 - 开始请求接口:http://api.nnzhp.cn/api/user/win_record
+2020-08-13 15:00:52.751 | SUCCESS  | common.requests_api:auto_request:32 - 接口请求成功，等待返回数据。请求URL:http://api.nnzhp.cn/api/user/win_record?sign=0144ba91d5e5dfdbed120faf79058144&userid=78926
+2020-08-13 15:00:52.755 | SUCCESS  | common.requests_api:auto_request:43 - 接口请求执行成功，返回数据成功
+2020-08-13 15:00:52.758 | INFO     | common.requests_api:auto_request:51 - 接口执行完毕
+2020-08-13 15:00:52.760 | INFO     | common.requests_api:auto_request:29 - 开始请求接口:http://api.nnzhp.cn/api/user/login
+2020-08-13 15:00:52.955 | SUCCESS  | common.requests_api:auto_request:35 - 接口请求成功，等待返回数据。请求URL:http://api.nnzhp.cn/api/user/login
+2020-08-13 15:00:52.959 | SUCCESS  | common.requests_api:auto_request:47 - 接口请求执行成功，返回数据成功
+2020-08-13 15:00:52.962 | INFO     | common.requests_api:auto_request:51 - 接口执行完毕
+2020-08-13 15:00:52.963 | INFO     | common.requests_api:auto_request:29 - 开始请求接口:http://api.nnzhp.cn/api/product/all
+2020-08-13 15:00:54.944 | SUCCESS  | common.requests_api:auto_request:32 - 接口请求成功，等待返回数据。请求URL:http://api.nnzhp.cn/api/product/all
+2020-08-13 15:00:54.947 | SUCCESS  | common.requests_api:auto_request:43 - 接口请求执行成功，返回数据成功
+2020-08-13 15:00:56.379 | INFO     | common.requests_api:auto_request:51 - 接口执行完毕
+2020-08-13 15:00:56.408 | INFO     | common.requests_api:auto_request:29 - 开始请求接口:http://api.nnzhp.cn/api/product/add
+2020-08-13 15:00:56.722 | SUCCESS  | common.requests_api:auto_request:35 - 接口请求成功，等待返回数据。请求URL:http://api.nnzhp.cn/api/product/add
+2020-08-13 15:00:56.725 | SUCCESS  | common.requests_api:auto_request:47 - 接口请求执行成功，返回数据成功
+2020-08-13 15:00:56.727 | INFO     | common.requests_api:auto_request:51 - 接口执行完毕
+2020-08-13 15:00:56.729 | INFO     | common.requests_api:auto_request:29 - 开始请求接口:http://api.nnzhp.cn/api/user/user_reg
+2020-08-13 15:00:56.822 | SUCCESS  | common.requests_api:auto_request:35 - 接口请求成功，等待返回数据。请求URL:http://api.nnzhp.cn/api/user/user_reg
+2020-08-13 15:00:56.826 | SUCCESS  | common.requests_api:auto_request:47 - 接口请求执行成功，返回数据成功
+2020-08-13 15:00:56.828 | INFO     | common.requests_api:auto_request:51 - 接口执行完毕
+2022-11-10 17:38:00.896 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 17:38:00.945 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1049, "Unknown database 'testbase'")
+2022-11-10 17:38:00.952 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 17:38:00.968 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1049, "Unknown database 'testbase'")
+2022-11-10 17:38:00.970 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 17:38:00.994 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1049, "Unknown database 'testbase'")
+2022-11-10 17:43:52.320 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 17:43:52.320 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:name 'localhost' is not defined
+2022-11-10 17:43:52.325 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 17:43:52.325 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:name 'localhost' is not defined
+2022-11-10 17:43:52.327 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 17:43:52.328 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:name 'localhost' is not defined
+2022-11-10 17:46:18.513 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 17:46:18.514 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:name 'root' is not defined
+2022-11-10 17:46:18.521 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 17:46:18.521 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:name 'root' is not defined
+2022-11-10 17:46:18.523 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 17:46:18.528 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:name 'root' is not defined
+2022-11-10 17:47:15.591 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 17:47:15.601 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1130, "DESKTOP-QL4LSTJ' is not allowed to connect to this MySQL server")
+2022-11-10 17:47:15.607 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 17:47:15.608 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1130, "DESKTOP-QL4LSTJ' is not allowed to connect to this MySQL server")
+2022-11-10 17:47:15.610 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 17:47:15.611 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1130, "DESKTOP-QL4LSTJ' is not allowed to connect to this MySQL server")
+2022-11-10 17:49:19.081 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 17:49:19.085 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1130, "DESKTOP-QL4LSTJ' is not allowed to connect to this MySQL server")
+2022-11-10 17:49:19.091 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 17:49:19.106 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1130, "DESKTOP-QL4LSTJ' is not allowed to connect to this MySQL server")
+2022-11-10 17:49:19.108 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 17:49:19.122 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1130, "DESKTOP-QL4LSTJ' is not allowed to connect to this MySQL server")
+2022-11-10 17:51:39.500 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 17:51:39.505 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1130, "DESKTOP-QL4LSTJ' is not allowed to connect to this MySQL server")
+2022-11-10 17:51:39.510 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 17:51:39.511 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1130, "DESKTOP-QL4LSTJ' is not allowed to connect to this MySQL server")
+2022-11-10 17:51:39.514 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 17:51:39.514 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1130, "DESKTOP-QL4LSTJ' is not allowed to connect to this MySQL server")
+2022-11-10 17:52:48.783 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 17:52:48.787 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1130, "DESKTOP-QL4LSTJ' is not allowed to connect to this MySQL server")
+2022-11-10 17:52:48.792 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 17:52:48.812 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1130, "DESKTOP-QL4LSTJ' is not allowed to connect to this MySQL server")
+2022-11-10 17:52:48.815 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 17:52:48.816 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1130, "DESKTOP-QL4LSTJ' is not allowed to connect to this MySQL server")
+2022-11-10 18:02:30.302 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 18:02:30.318 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1130, "DESKTOP-QL4LSTJ' is not allowed to connect to this MySQL server")
+2022-11-10 18:02:30.323 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 18:02:30.346 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1130, "DESKTOP-QL4LSTJ' is not allowed to connect to this MySQL server")
+2022-11-10 18:02:30.349 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 18:02:30.362 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(1130, "DESKTOP-QL4LSTJ' is not allowed to connect to this MySQL server")
+2022-11-10 18:08:26.345 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 18:08:28.410 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(2003, "Can't connect to MySQL server on '192.168.1.163' ([WinError 10061] 由于目标计算机积极拒绝，无法连接。)")
+2022-11-10 18:08:28.416 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 18:08:30.459 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(2003, "Can't connect to MySQL server on '192.168.1.163' ([WinError 10061] 由于目标计算机积极拒绝，无法连接。)")
+2022-11-10 18:08:30.463 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 18:08:32.489 | WARNING  | __main__:__init__:25 - 数据库连接时发生异常:(2003, "Can't connect to MySQL server on '192.168.1.163' ([WinError 10061] 由于目标计算机积极拒绝，无法连接。)")
+2022-11-10 18:12:06.771 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 18:12:06.779 | SUCCESS  | __main__:__init__:27 - 连接数据库成功
+2022-11-10 18:12:06.781 | WARNING  | __main__:select_one:46 - SQL语句执行异常，请检查SQL语句:select * from testcase_cjxm where case_id = "1",异常:(1146, "Table 'guest.testcase_cjxm' doesn't exist")
+2022-11-10 18:12:06.781 | SUCCESS  | __main__:close_base:36 - 关闭数据库成功
+2022-11-10 18:12:06.782 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 18:12:06.805 | SUCCESS  | __main__:__init__:27 - 连接数据库成功
+2022-11-10 18:12:06.806 | WARNING  | __main__:select_one:46 - SQL语句执行异常，请检查SQL语句:select * from None where None = "None",异常:(1146, "Table 'guest.none' doesn't exist")
+2022-11-10 18:12:06.807 | SUCCESS  | __main__:close_base:36 - 关闭数据库成功
+2022-11-10 18:12:06.808 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 18:12:06.820 | SUCCESS  | __main__:__init__:27 - 连接数据库成功
+2022-11-10 18:12:06.822 | WARNING  | __main__:select_all:63 - SQL语句执行异常，请检查SQL语句:select * from testcase_cjxm,异常:(1146, "Table 'guest.testcase_cjxm' doesn't exist")
+2022-11-10 18:12:06.823 | SUCCESS  | __main__:close_base:36 - 关闭数据库成功
+2022-11-10 18:30:23.099 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 18:30:23.105 | SUCCESS  | __main__:__init__:27 - 连接数据库成功
+2022-11-10 18:30:23.122 | WARNING  | __main__:select_one:46 - SQL语句执行异常，请检查SQL语句:select * from testcase_cjxm where case_id = "1",异常:(1146, "Table 'guest.testcase_cjxm' doesn't exist")
+2022-11-10 18:30:23.122 | SUCCESS  | __main__:close_base:36 - 关闭数据库成功
+2022-11-10 18:30:23.124 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 18:30:23.139 | SUCCESS  | __main__:__init__:27 - 连接数据库成功
+2022-11-10 18:30:23.141 | WARNING  | __main__:select_one:46 - SQL语句执行异常，请检查SQL语句:select * from None where None = "None",异常:(1054, "Unknown column 'None' in 'where clause'")
+2022-11-10 18:30:23.142 | SUCCESS  | __main__:close_base:36 - 关闭数据库成功
+2022-11-10 18:30:23.143 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 18:30:23.156 | SUCCESS  | __main__:__init__:27 - 连接数据库成功
+2022-11-10 18:30:23.158 | WARNING  | __main__:select_all:63 - SQL语句执行异常，请检查SQL语句:select * from testcase_cjxm,异常:(1146, "Table 'guest.testcase_cjxm' doesn't exist")
+2022-11-10 18:30:23.159 | SUCCESS  | __main__:close_base:36 - 关闭数据库成功
+2022-11-10 18:30:52.468 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 18:30:52.472 | SUCCESS  | __main__:__init__:27 - 连接数据库成功
+2022-11-10 18:30:52.474 | WARNING  | __main__:select_one:46 - SQL语句执行异常，请检查SQL语句:select * from testcase_cjxm where case_id = "1",异常:(1146, "Table 'guest.testcase_cjxm' doesn't exist")
+2022-11-10 18:30:52.474 | SUCCESS  | __main__:close_base:36 - 关闭数据库成功
+2022-11-10 18:30:52.475 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 18:30:52.493 | SUCCESS  | __main__:__init__:27 - 连接数据库成功
+2022-11-10 18:30:52.495 | WARNING  | __main__:select_one:46 - SQL语句执行异常，请检查SQL语句:select * from None where None = "None",异常:(1054, "Unknown column 'None' in 'where clause'")
+2022-11-10 18:30:52.495 | SUCCESS  | __main__:close_base:36 - 关闭数据库成功
+2022-11-10 18:30:52.496 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 18:30:52.499 | SUCCESS  | __main__:__init__:27 - 连接数据库成功
+2022-11-10 18:30:52.500 | WARNING  | __main__:select_all:63 - SQL语句执行异常，请检查SQL语句:select * from testcase_cjxm,异常:(1146, "Table 'guest.testcase_cjxm' doesn't exist")
+2022-11-10 18:30:52.500 | SUCCESS  | __main__:close_base:36 - 关闭数据库成功
+2022-11-10 18:32:02.585 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 18:32:02.590 | SUCCESS  | __main__:__init__:27 - 连接数据库成功
+2022-11-10 18:32:02.590 | WARNING  | __main__:select_one:46 - SQL语句执行异常，请检查SQL语句:select * from testcase_cjxm where case_id = "1",异常:(1054, "Unknown column 'case_id' in 'where clause'")
+2022-11-10 18:32:02.591 | SUCCESS  | __main__:close_base:36 - 关闭数据库成功
+2022-11-10 18:32:02.592 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 18:32:02.603 | SUCCESS  | __main__:__init__:27 - 连接数据库成功
+2022-11-10 18:32:02.604 | WARNING  | __main__:select_one:46 - SQL语句执行异常，请检查SQL语句:select * from None where None = "None",异常:(1054, "Unknown column 'None' in 'where clause'")
+2022-11-10 18:32:02.604 | SUCCESS  | __main__:close_base:36 - 关闭数据库成功
+2022-11-10 18:32:02.605 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 18:32:02.619 | SUCCESS  | __main__:__init__:27 - 连接数据库成功
+2022-11-10 18:32:02.621 | SUCCESS  | __main__:select_all:61 - 执行查询SQL语句:select * from testcase_cjxm
+2022-11-10 18:32:02.621 | SUCCESS  | __main__:select_all:66 - 数据库返回查询数据:()
+2022-11-10 18:32:02.621 | SUCCESS  | __main__:close_base:36 - 关闭数据库成功
+2022-11-10 18:32:58.992 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 18:32:58.997 | SUCCESS  | __main__:__init__:27 - 连接数据库成功
+2022-11-10 18:32:58.998 | WARNING  | __main__:select_one:46 - SQL语句执行异常，请检查SQL语句:select * from testcase_cjxm where case_id = "1",异常:(1054, "Unknown column 'case_id' in 'where clause'")
+2022-11-10 18:32:58.998 | SUCCESS  | __main__:close_base:36 - 关闭数据库成功
+2022-11-10 18:32:58.999 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 18:32:59.000 | SUCCESS  | __main__:__init__:27 - 连接数据库成功
+2022-11-10 18:32:59.001 | WARNING  | __main__:select_one:46 - SQL语句执行异常，请检查SQL语句:select * from None where None = "None",异常:(1054, "Unknown column 'None' in 'where clause'")
+2022-11-10 18:32:59.001 | SUCCESS  | __main__:close_base:36 - 关闭数据库成功
+2022-11-10 18:32:59.002 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 18:32:59.003 | SUCCESS  | __main__:__init__:27 - 连接数据库成功
+2022-11-10 18:32:59.004 | SUCCESS  | __main__:select_all:61 - 执行查询SQL语句:select * from testcase_cjxm
+2022-11-10 18:32:59.004 | SUCCESS  | __main__:select_all:66 - 数据库返回查询数据:()
+2022-11-10 18:32:59.004 | SUCCESS  | __main__:close_base:36 - 关闭数据库成功
+2022-11-10 18:33:25.677 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 18:33:25.682 | SUCCESS  | __main__:__init__:27 - 连接数据库成功
+2022-11-10 18:33:25.682 | WARNING  | __main__:select_one:46 - SQL语句执行异常，请检查SQL语句:select * from testcase_cjxm where case_id = "1",异常:(1054, "Unknown column 'case_id' in 'where clause'")
+2022-11-10 18:33:25.683 | SUCCESS  | __main__:close_base:36 - 关闭数据库成功
+2022-11-10 18:33:25.684 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 18:33:25.685 | SUCCESS  | __main__:__init__:27 - 连接数据库成功
+2022-11-10 18:33:25.685 | WARNING  | __main__:select_one:46 - SQL语句执行异常，请检查SQL语句:select * from None where None = "None",异常:(1054, "Unknown column 'None' in 'where clause'")
+2022-11-10 18:33:25.686 | SUCCESS  | __main__:close_base:36 - 关闭数据库成功
+2022-11-10 18:33:25.687 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 18:33:25.688 | SUCCESS  | __main__:__init__:27 - 连接数据库成功
+2022-11-10 18:33:25.688 | SUCCESS  | __main__:select_all:61 - 执行查询SQL语句:select * from testcase_cjxm
+2022-11-10 18:33:25.688 | SUCCESS  | __main__:select_all:66 - 数据库返回查询数据:()
+2022-11-10 18:33:25.689 | SUCCESS  | __main__:close_base:36 - 关闭数据库成功
+2022-11-10 18:33:51.819 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 18:33:51.824 | SUCCESS  | __main__:__init__:27 - 连接数据库成功
+2022-11-10 18:33:51.825 | SUCCESS  | __main__:select_one:44 - 执行查询SQL语句:select * from testcase_cjxm where case_id = "1"
+2022-11-10 18:33:51.825 | SUCCESS  | __main__:select_one:49 - 数据库返回查询数据:[{'case_id': 1}]
+2022-11-10 18:33:51.825 | SUCCESS  | __main__:close_base:36 - 关闭数据库成功
+2022-11-10 18:33:51.826 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 18:33:51.827 | SUCCESS  | __main__:__init__:27 - 连接数据库成功
+2022-11-10 18:33:51.827 | WARNING  | __main__:select_one:46 - SQL语句执行异常，请检查SQL语句:select * from None where None = "None",异常:(1054, "Unknown column 'None' in 'where clause'")
+2022-11-10 18:33:51.828 | SUCCESS  | __main__:close_base:36 - 关闭数据库成功
+2022-11-10 18:33:51.829 | INFO     | __main__:__init__:15 - 正在连接数据库,数据库地址=localhost,用户名=root,数据库密码=root,数据库名称=testbase
+2022-11-10 18:33:51.846 | SUCCESS  | __main__:__init__:27 - 连接数据库成功
+2022-11-10 18:33:51.847 | SUCCESS  | __main__:select_all:61 - 执行查询SQL语句:select * from testcase_cjxm
+2022-11-10 18:33:51.847 | SUCCESS  | __main__:select_all:66 - 数据库返回查询数据:[{'case_id': 1}]
+2022-11-10 18:33:51.848 | SUCCESS  | __main__:close_base:36 - 关闭数据库成功
